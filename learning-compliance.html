@@ -119,7 +119,7 @@
     <center>
         <button class="btn btn-blue" onmouseover="this.style.backgroundColor='#0080ff'" onmouseout="this.style.backgroundColor='#0066cc'" style="display: inline-block; padding: 8px 16px 8px 42px; font-size: 16px; color: white; background-color: #0066cc; background-image: url(learning-compliance/icon-paper.png); background-repeat: no-repeat; background-position: left center; border: none; border-radius: 4px;" onclick="window.location.href='rsc/paper_1106.pdf';">Paper</button>
         <button class="btn btn-orange" onmouseover="this.style.backgroundColor='#FFBF00'" onmouseout="this.style.backgroundColor='#FFA500'" style="display: inline-block; padding: 8px 16px 8px 42px; font-size: 16px; color: white; background-color: #FFA500; background-image: url(learning-compliance/icon-paper.png); background-repeat: no-repeat; background-position: left center; border: none; border-radius: 4px;" onclick="window.location.href='learning-compliance/learning_compliance_thesis.pdf';">Supplement</button>
-        <!-- <button class="btn" onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='#333'" style="display: inline-block; padding: 8px 16px 8px 36px; font-size: 16px; color: white; background-color: #333; background-image: url(https://github.com/favicon.ico); background-repeat: no-repeat; background-position: left center; border: none; border-radius: 4px;" onclick="window.location.href='https://github.com/Improbable-AI/dribblebot';">GitHub</button> -->
+        <button class="btn" onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='#333'" style="display: inline-block; padding: 8px 16px 8px 36px; font-size: 16px; color: white; background-color: #333; background-image: url(https://github.com/favicon.ico); background-repeat: no-repeat; background-position: left center; border: none; border-radius: 4px;" onclick="window.location.href='https://github.com/Improbable-AI/learning-compliance';">GitHub</button>
     </center><br>
 
     <!-- straight -->
@@ -157,43 +157,17 @@
             Controlling the contact force during interactions is an inherent requirement for locomotion and manipulation tasks. Current reinforcement learning approaches to locomotion and manipulation rely implicitly on forceful interaction to accomplish tasks but do not explicitly regulate it. This paper proposes a reinforcement learning task specification that focuses on matching desired contact force levels. Integrating force control with the coordination of a robot's body and arm, we present an end-to-end policy for legged manipulator control. 
             This whole-body policy, trained using reinforcement learning, enables compliant gripper and whole-body pulling movements that have not been previously demonstrated using a learned policy. It also facilitates teleoperated demonstration of tasks that are difficult to directly demonstrate due to the mismatch between human and quadruped morphology. We characterize the force-tracking performance of learned policies in simulation and the real world, indicating their potential for force-critical tasks such as safe human-robot interaction, kinesthetic demonstration, and manipulation of heavy objects. Our results demonstrate the first deployment of learning-based whole-body force application control in legged manipulators, paving the way for more versatile and adaptable legged robots.
         </div>
-        <div class="center" style="display: flex; justify-content: center; gap: 5px;">
-        <div class="center">
-            <video
-              width="100%"
-              style="max-width: 640px;"
-              controls="true"
-              autoplay
-              muted
-              loop
-              onplaying="this.controls=false"
-              id="video"
-            >
-              <source src="learning-compliance/ICRA24 video.mp4" type="video/mp4" />
-            </video>
-          </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-              const video = document.getElementById('video');
-              const observer = new IntersectionObserver(
-                (entries) => {
-                  entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                      video.play();
-                    } else {
-                      video.pause();
-                    }
-                  });
-                },
-                {
-                  threshold: 0.5, // 50% of the video must be visible for it to play
-                }
-              );
-              observer.observe(video);
-            });
-          </script>
     </div><br><br>
 
+    <!-- straight -->
+    <div class="container" style="padding-top: 10px; font-size: 20px">
+      <div align="center">
+          <div class="center">
+              <iframe src="https://www.youtube.com/watch?v=IXkfI7U1uF8?rel=0&amp;autoplay=0&amp;modestbranding=1&amp;controls=1&amp;mute=0&amp;enablejsapi=1" frameborder="0" allow="accelerometer; autoplay=0; modestbranding; controls=0; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="100%" height="360" style="max-width: 640px;"></iframe>
+          </div>
+      </div>
+    </div><br>
+  
 
     <!-- <div class="container">
         
