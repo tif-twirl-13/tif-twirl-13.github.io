@@ -1,1 +1,2 @@
 learning-compliance/ICRA24[[:space:]]video.mp4 filter=lfs diff=lfs merge=lfs -text
+wholebody-pose-control/*.mp4 filter=lfs diff=lfs merge=lfs -text
