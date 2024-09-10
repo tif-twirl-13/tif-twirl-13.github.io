@@ -64,9 +64,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#Overview">Overview</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Paper">Paper</a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -79,7 +76,7 @@
             </h2>
             <br>
             <h6>
-                <a href="Home.html">Tifanny Portela</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://ch.linkedin.com/in/tifanny-pereira-portela-97868521a?original_referer=https%3A%2F%2Fwww.google.com%2F">Tifanny Portela</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://scholar.google.com/citations?user=QZKCzOQAAAAJ&hl=en" target="_blank">Andrei Cramariuc</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://mayankm96.github.io" target="_blank">Mayank Mittal</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://scholar.google.ch/citations?user=DO3quJYAAAAJ&hl=en" target="_blank">Marco Hutter</a><br>
@@ -104,23 +101,19 @@
                     <a href="https://ethz.ch/de.html" target="_blank">
                         <img src="wholebody-pose-control/logo eth.png" alt="Improbable AI" width="140">
                     </a>
-                </object>ß
+                </object>
                 </div>
             </div>
         </div>
         
     </div><br>
 
-    <center>
-        <button class="btn btn-blue" onmouseover="this.style.backgroundColor='#0080ff'" onmouseout="this.style.backgroundColor='#0066cc'" style="display: inline-block; padding: 8px 16px 8px 42px; font-size: 16px; color: white; background-color: #0066cc; background-image: url(learning-compliance/icon-paper.png); background-repeat: no-repeat; background-position: left center; border: none; border-radius: 4px;" onclick="window.location.href='';">Paper</button>
-    </center><br>
-
     <!-- Abstract -->
     <div class="container">
         <h4 id="Abstract" style="padding-top: 70px; margin-top: -80px; ">Abstract</h4>
         <hr>
         <div style="text-align: justify">
-          Combining manipulation with the mobility of legged robots is essential for a wide range of robotic applications. However, integrating an arm with a mobile base significantly increases the system's complexity, making precise end-effector control challenging. Existing model-based approaches are often constrained by their modeling assumptions, leading to limited robustness. Meanwhile, recent Reinforcement Learning (RL) implementations restrict the arm's workspace to be in front of the robot or track only the position to obtain decent tracking accuracy. In this work, we address these limitations by introducing a whole-body RL formulation for end-effector pose tracking in a large workspace on rough, unstructured terrains. Our proposed method involves a terrain-aware sampling strategy for the robot's initial configuration and end-effector pose commands, as well as a game-based curriculum to extend the robot's operating range. We validate our approach on the ANYmal quadrupedal robot with a six DoF robotic arm. Through our experiments, we show that the learned controller achieves precise command tracking over a large workspace and adapts across varying terrains such as stairs and slopes. On deployment, it achieves a pose-tracking error of 2.64 cm and 3.64 degrees, outperforming existing competitive baselines.
+          Combining manipulation with the mobility of legged robots is essential for a wide range of robotic applications. However, integrating an arm with a mobile base significantly increases the system's complexity, making precise end-effector control challenging. Existing model-based approaches are often constrained by their modeling assumptions, leading to limited robustness. Meanwhile, recent Reinforcement Learning (RL) implementations restrict the arm's workspace to be in front of the robot or track only the position to obtain decent tracking accuracy. In this work, we address these limitations by introducing a whole-body RL formulation for <b>end-effector pose tracking</b> in a large workspace on <b>rough terrains</b>. Our proposed method involves a terrain-aware sampling strategy for the robot's initial configuration and end-effector pose commands, as well as a game-based curriculum to extend the robot's operating range. We validate our approach on the ANYmal quadrupedal robot with a six DoF robotic arm. Through our experiments, we show that the learned controller achieves <b>precise</b> command tracking over a <b>large workspace</b> and adapts across varying terrains such as stairs and slopes. On deployment, it achieves a pose-tracking error of  <b>2.64 cm</b> and <b>3.64 degrees</b>, outperforming existing competitive baselines.
     </div><br><br>
 
      <!-- Overview -->
@@ -130,7 +123,7 @@
         <br>
         <div align="center", style="font-size: 17px">
             <!-- <h5 id="sys-arch" style="padding-top: 30px; margin-top: -40px;"> -->
-              We train a reinforcement learning controller to track end-effector <b>pose commands</b> in simulation and transfer to a full-sized quadruped manipulator.
+              We train an RL controller to track end-effector <b>pose commands</b> in simulation and transfer to a mobile legged manipulator.
             <!-- </h5> -->
             <br>
             <br>
@@ -170,7 +163,7 @@
                       observer.observe(video);
                     });
                   </script>
-                <p style="text-align: center; margin-top: 5px;">End-effector pose tracking evaluation on flat terrain</p>
+                <p style="text-align: center; margin-top: 5px;">End-effector pose tracking evaluation, using a motion capture system, on flat terrain across 20 randomly sampled poses</p>
               </div>
             </div>
     </div>
@@ -178,7 +171,7 @@
     <br>
     <div align="center", style="font-size: 17px">
         <!-- <h5 id="sys-arch" style="padding-top: 30px; margin-top: -40px;"> -->
-        On stairs.
+        We evaluate the tracking performance of our whole-body RL controller on stairs using a motion capture system across 20 sampled poses in the half-space in front of the robot under three base orientations. The average position error reaches <b>2.64 cm</b>, and the average orientation error <b>3.64 degrees</b>.
         <!-- </h5> -->
         <br>
         <br>
@@ -218,7 +211,7 @@
                   observer.observe(video);
                 });
               </script>
-            <p style="text-align: center; margin-top: 5px;">Whole-body tracking on stairs 1</p>
+            <p style="text-align: center; margin-top: 5px;">(A) sideways and facing up the stairs</p>
           </div>
           <div>
             <div class="center">
@@ -255,7 +248,7 @@
                   observer.observe(video);
                 });
               </script>
-            <p style="text-align: center; margin-top: 5px;">Whole-body tracking on stairs 2</p>
+            <p style="text-align: center; margin-top: 5px;">(B) sideways and facing down the stairs</p>
           </div>
           <!-- <div>
             <img src="rsc/roughness_sensing_gait.gif" style="width: 70%;" alt="Roughness Sensing Gait" />
@@ -269,7 +262,7 @@
     <br>
     <div align="center", style="font-size: 17px">
         <!-- <h5 id="sys-arch" style="padding-top: 30px; margin-top: -40px;"> -->
-        Added weight
+        The system can handle unmodeled added weight on the end-effector, allowing for the attachment of various end-effectors and dynamic carrying of unknown payloads during operation.
         <!-- </h5> -->
         <br>
         <br>
@@ -309,7 +302,7 @@
                   observer.observe(video);
                 });
               </script>
-            <p style="text-align: center; margin-top: 5px;">Static weight</p>
+            <p style="text-align: center; margin-top: 5px;"> Up to 3.75 kg when stationary</p>
           </div>
           <div>
             <div class="center">
@@ -346,7 +339,7 @@
                   observer.observe(video);
                 });
               </script>
-            <p style="text-align: center; margin-top: 5px;">Dynamic weight</p>
+            <p style="text-align: center; margin-top: 5px;">Up to 1.3 kg when in movement</p>
           </div>
           <!-- <div>
             <img src="rsc/roughness_sensing_gait.gif" style="width: 70%;" alt="Roughness Sensing Gait" />
