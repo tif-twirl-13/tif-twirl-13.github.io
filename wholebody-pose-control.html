@@ -3,12 +3,12 @@
 
 <head>
     <!-- Title -->
-    <title>Whole-body end-effector pose control</title>
+    <title>Whole-Body End-Effector Pose Tracking</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Whole-body end-effector pose control">
+    <meta name="description" content="Whole-body end-effector pose tracking">
     <meta name="keywords" content="Whole-body control, Reinforcement Learning">
 
     <!-- Bootstrap core CSS -->
@@ -72,7 +72,7 @@
         
         <div align="center">
             <h2 class="text-center" align="center">
-              Whole-body end-effector pose control
+              Whole-Body End-Effector Pose Tracking
             </h2>
             <br>
             <h6>
@@ -89,24 +89,33 @@
                 <div>
                 <object hspace="50">
                     <a href="https://ai.ethz.ch" target="_blank">
-                        <img src="wholebody-pose-control/logo eth ai center.png" alt="MIT" width="140">
+                        <img src="wholebody-pose-control/logo eth ai center.png" alt="eth ai center" width="140">
                     </a>
                 </object>
                 <object hspace="50">
                     <a href="https://rsl.ethz.ch" target="_blank">
-                        <img src="wholebody-pose-control/logo rsl.png" alt="MIT" width="140">
+                        <img src="wholebody-pose-control/logo rsl.png" alt="rsl" width="140">
                     </a>
                 </object>
                 <object hspace="50">
-                    <a href="https://ethz.ch/de.html" target="_blank">
-                        <img src="wholebody-pose-control/logo eth.png" alt="Improbable AI" width="140">
-                    </a>
+                  <a href="https://www.nvidia.com/en-us/" target="_blank">
+                      <img src="wholebody-pose-control/nvidia-logo.png" alt="nvidia" width="140">
+                  </a>
+                </object>
+                <object hspace="50">
+                  <a href="https://ethz.ch/de.html" target="_blank">
+                      <img src="wholebody-pose-control/logo eth.png" alt="eth" width="140">
+                  </a>
                 </object>
                 </div>
             </div>
         </div>
         
     </div><br>
+
+    <center>
+      <button class="btn btn-blue" onmouseover="this.style.backgroundColor='#0080ff'" onmouseout="this.style.backgroundColor='#0066cc'" style="display: inline-block; padding: 8px 16px 8px 42px; font-size: 16px; color: white; background-color: #0066cc; background-image: url(learning-compliance/icon-paper.png); background-repeat: no-repeat; background-position: left center; border: none; border-radius: 4px;" onclick="window.location.href='https://arxiv.org/pdf/2409.16048';">Paper</button>
+    </center><br>
 
     <!-- Abstract -->
     <div class="container">
@@ -140,7 +149,7 @@
                       onplaying="this.controls=false"
                       id="video"
                     >
-                      <source src="wholebody-pose-control/all poses flat.mp4" type="video/mp4" />
+                      <source src="wholebody-pose-control/tracking flat.mp4" type="video/mp4" />
                     </video>
                   </div>
                 <script>
@@ -171,7 +180,8 @@
     <br>
     <div align="center", style="font-size: 17px">
         <!-- <h5 id="sys-arch" style="padding-top: 30px; margin-top: -40px;"> -->
-        We evaluate the tracking performance of our whole-body RL controller on stairs using a motion capture system across 20 sampled poses in the half-space in front of the robot under three base orientations. The average position error reaches <b>2.64 cm</b>, and the average orientation error <b>3.64 degrees</b>.
+        We evaluate the tracking performance of our whole-body RL controller on stairs. 
+        The average position error reaches <b>2.64 cm</b>, and the average orientation error <b>3.64 degrees</b>.
         <!-- </h5> -->
         <br>
         <br>
@@ -188,7 +198,7 @@
                   onplaying="this.controls=false"
                   id="video"
                 >
-                  <source src="wholebody-pose-control/stairs 1.mp4" type="video/mp4" />
+                  <source src="wholebody-pose-control/tracking stairs.mp4" type="video/mp4" />
                 </video>
               </div>
             <script>
@@ -211,49 +221,8 @@
                   observer.observe(video);
                 });
               </script>
-            <p style="text-align: center; margin-top: 5px;">(A) sideways and facing up the stairs</p>
+            <p style="text-align: center; margin-top: 5px;">End-effector pose tracking evaluation, using a motion capture system, on stairs across 20 randomly sampled poses</p>
           </div>
-          <div>
-            <div class="center">
-                <video
-                  width="100%"
-                  style="max-width: 640px;"
-                  controls="true"
-                  autoplay
-                  muted
-                  loop
-                  onplaying="this.controls=false"
-                  id="video"
-                >
-                  <source src="wholebody-pose-control/stairs 2.mp4" type="video/mp4" />
-                </video>
-              </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                  const video = document.getElementById('video');
-                  const observer = new IntersectionObserver(
-                    (entries) => {
-                      entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                          video.play();
-                        } else {
-                          video.pause();
-                        }
-                      });
-                    },
-                    {
-                      threshold: 0.5, // 50% of the video must be visible for it to play
-                    }
-                  );
-                  observer.observe(video);
-                });
-              </script>
-            <p style="text-align: center; margin-top: 5px;">(B) sideways and facing down the stairs</p>
-          </div>
-          <!-- <div>
-            <img src="rsc/roughness_sensing_gait.gif" style="width: 70%;" alt="Roughness Sensing Gait" />
-            <p style="text-align: center; margin-top: 5px;"><b>Roughness sensing gait</b></p>
-          </div> -->
         </div>
     </div>
 
@@ -279,7 +248,7 @@
                   onplaying="this.controls=false"
                   id="video"
                 >
-                  <source src="wholebody-pose-control/added weight static.mp4" type="video/mp4" />
+                  <source src="wholebody-pose-control/static load.mp4" type="video/mp4" />
                 </video>
               </div>
             <script>
@@ -316,7 +285,7 @@
                   onplaying="this.controls=false"
                   id="video"
                 >
-                  <source src="wholebody-pose-control/added weight dynamic.mp4" type="video/mp4" />
+                  <source src="wholebody-pose-control/dynamic load.mp4" type="video/mp4" />
                 </video>
               </div>
             <script>
@@ -345,6 +314,57 @@
             <img src="rsc/roughness_sensing_gait.gif" style="width: 70%;" alt="Roughness Sensing Gait" />
             <p style="text-align: center; margin-top: 5px;"><b>Roughness sensing gait</b></p>
           </div> -->
+        </div>
+    </div>
+
+  <br><br>
+
+    <hr>
+    <br>
+    <div align="center", style="font-size: 17px">
+        <!-- <h5 id="sys-arch" style="padding-top: 30px; margin-top: -40px;"> -->
+        We compare the tracking performance of our learned whole-body RL controller to a model-based MPC baseline on flat terrain.
+        While both perform similarly in median accuracy, the RL policy achieves significantly lower mean errors by <b>avoiding self-collisions</b> and <b>local minimas</b> during transitions between distant poses.
+        <!-- </h5> -->
+        <br>
+        <br>
+        <div class="center" style="display: flex; justify-content: center; gap: 5px;">
+          <div>
+            <div class="center">
+                <video
+                  width="100%"
+                  style="max-width: 640px;"
+                  controls="true"
+                  autoplay
+                  muted
+                  loop
+                  onplaying="this.controls=false"
+                  id="video"
+                >
+                  <source src="wholebody-pose-control/mpc.mp4" type="video/mp4" />
+                </video>
+              </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  const video = document.getElementById('video');
+                  const observer = new IntersectionObserver(
+                    (entries) => {
+                      entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                          video.play();
+                        } else {
+                          video.pause();
+                        }
+                      });
+                    },
+                    {
+                      threshold: 0.5, // 50% of the video must be visible for it to play
+                    }
+                  );
+                  observer.observe(video);
+                });
+              </script>
+          </div>
         </div>
     </div>
 
